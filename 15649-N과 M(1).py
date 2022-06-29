@@ -1,0 +1,16 @@
+def Per():
+    if len(s) == M:
+        print(' '.join(map(str, s)))
+        return
+    for i in range(1, N+1):
+        if i not in s:
+            s.append(i)
+            Per()
+            s.pop()
+
+
+N, M = map(int, input().split())
+
+s = []
+
+Per()
